@@ -4,27 +4,27 @@ class BangunDatar {
         this.keliling = keliling;
     }
 
-    persegi(s) {
-        this.luas = s * s;
-        this.keliling = 4 * s;
+    persegi(sisi) {
+        this.luas = sisi * sisi;
+        this.keliling = 4 * sisi;
         return `Luas = ${this.luas}, Keliling = ${this.keliling}`;
     }
 
-    persegiPanjang(p, l) {
-        this.luas = p * l;
-        this.keliling = 2 * (p + l);
+    persegiPanjang(panjang, lebar) {
+        this.luas = panjang * lebar;
+        this.keliling = 2 * (panjang + lebar);
         return `Luas = ${this.luas}, Keliling = ${this.keliling}`;
     }
 
-    segitigaSiku2(a, t) {
-        this.luas = (1 / 2) * a * t;
-        this.keliling = a + t + sqrt(a * a + t * t);
+    segitigaSiku2(alas, tinggi) {
+        this.luas = (1 / 2) * alas * tinggi;
+        this.keliling = alas + tinggi + sqrt(2 * alas + 2 * tinggi);
         return `Luas = ${this.luas}, Keliling = ${this.keliling}`;
     }
 
-    lingkarang(r) {
-        this.luas = Math.PI * r * r;
-        this.keliling = 2 * Math.PI * r;
+    lingkaran(jari) {
+        this.luas = Math.PI * jari * jari;
+        this.keliling = 2 * Math.PI * jari;
         return `Luas = ${this.luas}, Keliling = ${this.keliling}`;
     }
 }
@@ -35,19 +35,19 @@ class BangunRuang extends BangunDatar {
         this.volume = volume;
     }
 
-    Kubus(s) {
-        Persegi(s);
+    Kubus(sisi) {
+        persegi(sisi);
         this.luas = luas;
         this.keliling = keliling;
-        this.volume = s * luas;
+        this.volume = sisi * luas;
         return `Luas = ${this.luas}, Keliling = ${this.keliling}, Volume = ${this.volume}`;
     }
 
-    Balok(p, l, t) {
-        PersegiPanjang(p, l);
+    Balok(panjang, lebar, tinggi) {
+        persegiPanjang(panjang, lebar);
         this.luas = luas;
         this.keliling = keliling;
-        this.volume = t * luas;
+        this.volume = tinggi * luas;
         return `Luas = ${this.luas}, Keliling = ${this.keliling}, Volume = ${this.volume}`;
     }
 }
