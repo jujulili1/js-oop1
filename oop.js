@@ -28,3 +28,26 @@ class BangunDatar {
         return `Luas = ${this.luas}, Keliling = ${this.keliling}`;
     }
 }
+
+class BangunRuang extends BangunDatar {
+    constructor(luas, keliling, volume) {
+        super(luas, keliling);
+        this.volume = volume;
+    }
+
+    Kubus(s) {
+        Persegi(s);
+        this.luas = luas;
+        this.keliling = keliling;
+        this.volume = s * luas;
+        return `Luas = ${this.luas}, Keliling = ${this.keliling}, Volume = ${this.volume}`;
+    }
+
+    Balok(p, l, t) {
+        PersegiPanjang(p, l);
+        this.luas = luas;
+        this.keliling = keliling;
+        this.volume = t * luas;
+        return `Luas = ${this.luas}, Keliling = ${this.keliling}, Volume = ${this.volume}`;
+    }
+}
